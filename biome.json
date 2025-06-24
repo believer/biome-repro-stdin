@@ -1,9 +1,19 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": ["**"]
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
     }
   },
   "formatter": {
@@ -16,15 +26,5 @@
       "arrowParentheses": "always",
       "trailingCommas": "es5"
     }
-  },
-  "overrides": [
-    {
-      "includes": ["apps/test/**"],
-      "javascript": {
-        "formatter": {
-          "lineWidth": 100
-        }
-      }
-    }
-  ]
+  }
 }
